@@ -61,13 +61,13 @@ But that is exactly what I have to do.
 
 The `Cards` view (which allows you to sort cards you are a member of by due date as well as by board) is nice, but, its severely hampered by what I talk about in '(Lack Of) Closure'. If you don't keep great track of your due dates and card memberships, have fun attempting to seriously make use of `Cards`.
 
-**TL;DR: \=\(**
+**TL;DR: =\(**
 
 ### *And the context of this card is*?
 
 Linking cards. Dependencies between cards. I realize Fog Creek are probably working towards this, but Trello doesn't have these features **right now**, and it hurts Trello, **right now**.
 
-**TL;DR: \=\|**
+**TL;DR: =\|**
 
 ## *I'm Calm, I'm Calm*
 

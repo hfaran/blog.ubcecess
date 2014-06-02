@@ -27,16 +27,16 @@ Let's grab the weird dictionary of courses from that list and get started.
 I'll only be looking at course groups from **2013W Term 2** (with some data that
 is baggage from Term 1 for which there is a caveat later).
 
-```python
+{% highlight python linenos %}
 from courses import COURSES
-```
+{% endhighlight %}
 
 Now, to analyze any data about these groups, I first need to get said data from
 Facebook's Graph API. To do **that**, I need to first get the `group-id` of each
 group. First, let's make a long and complicated list comprehension to flatten
 the above monstrosity.
 
-```python
+{% highlight python linenos %}
 courses = [
     "{} {} - Term 2 2013W".format(
         dept,
@@ -46,13 +46,13 @@ courses = [
     for level, course_list in dept_dict.items()
     for course in course_list
 ]
-```
+{% endhighlight %}
 
-```python
+{% highlight python linenos %}
 courses
-```
+{% endhighlight %}
 
-```python
+{% highlight python linenos %}
 ['EECE 300 - Term 2 2013W',
  'EECE 310 - Term 2 2013W',
  'EECE 315 - Term 2 2013W',
@@ -69,7 +69,7 @@ courses
  'EECE 381 - Term 2 2013W',
  'EECE 392 - Term 2 2013W',
  'CPSC 304 - Term 2 2013W']
-```
+{% endhighlight %}
 
 
 
@@ -79,10 +79,11 @@ Neat. Now that we have that list, we can feed to search requests to the Graph
 API which will give us the IDs of each group so that we can look each group
 individually later.
 
-```python
+{% highlight python linenos %}
 import facebook
 
-graph = facebook.GraphAPI(FB_OAUTH_TOKEN)  # OAuth token redacted for obvious reasons
+# OAuth token redacted for obvious reasons
+graph = facebook.GraphAPI(FB_OAUTH_TOKEN)
 course_ids = [graph.request(
     "search",
     args={
@@ -90,7 +91,7 @@ course_ids = [graph.request(
         "type": "group"
     }
 )["data"][0] for group_name in courses]
-```
+{% endhighlight %}
 
 ### Getting Group Members and Posts (i.e., the Actual Data)
 
@@ -98,7 +99,7 @@ Let's populate `course_ids` with some more information. Since we want to gauge
 activity of these groups, we can grab all posts on each from `/group-id/feed`
 and a list of all members from `/group-id/members`.
 
-```python
+{% highlight python linenos %}
 for d in course_ids:
     d["members"] = graph.request(
         "/{id}/members".format(id=d["id"]),
@@ -108,7 +109,7 @@ for d in course_ids:
         "/{id}/feed".format(id=d["id"]),
         args={"limit": 500}
     )
-```
+{% endhighlight %}
 
 ## "Analysis"
 
@@ -116,19 +117,19 @@ We are now dealing with quite a large dataset so I'll refrain from printing it
 out (the above took many legitimate seconds to actually complete). But let's
 start by looking at some basic numbers:
 
-```python
+{% highlight python linenos %}
 course_stats = [{
     "name": d["name"],
     "num_members": len(d["members"]["data"]),
     "num_posts": len(d["feed"]["data"])
 } for d in course_ids]
-```
+{% endhighlight %}
 
-```python
+{% highlight python linenos %}
 course_stats
-```
+{% endhighlight %}
 
-```python
+{% highlight python linenos %}
 [{'name': u'EECE 300 - Term 2 2013W', 'num_members': 13, 'num_posts': 11},
  {'name': u'EECE 310 - Term 2 2013W', 'num_members': 26, 'num_posts': 1},
  {'name': u'EECE 315 - Term 2 2013W', 'num_members': 57, 'num_posts': 17},
@@ -145,24 +146,28 @@ course_stats
  {'name': u'EECE 381 - Term 2 2013W', 'num_members': 49, 'num_posts': 6},
  {'name': u'EECE 392 - Term 2 2013W', 'num_members': 28, 'num_posts': 4},
  {'name': u'CPSC 304 - Term 2 2013W', 'num_members': 21, 'num_posts': 2}]
-```
+{% endhighlight %}
 
 Now that we have the numbers, let's play with them a bit/see how they look on
 some graphs.
 
-```python
+{% highlight python linenos %}
 data = sorted(course_stats, key=lambda x: x["num_members"])
-```
+{% endhighlight %}
 
-```python
-print("Average # of members: {:.0f}".format(average([i["num_members"] for i in data])))
-print("Average # of posts: {:.0f}".format(average([i["num_posts"] for i in data])))
-```
+{% highlight python linenos %}
+print("Average # of members: {:.0f}".format(
+    average([i["num_members"] for i in data])
+))
+print("Average # of posts: {:.0f}".format(
+    average([i["num_posts"] for i in data])
+))
+{% endhighlight %}
 
-```
-Average # of members: 60
-Average # of posts: 31
-```
+
+    Average # of members: 60
+    Average # of posts: 31
+
 
 
 Before I start talking about this at all, **HUGE CAVEAT**: **some of these
@@ -179,7 +184,7 @@ Now what about participating? Well, `31` may not be a huge number, but even so,
 `31` suggests usage on a notable level. People are asking questions, providing
 answers, and useful materials. We'll investigate this more later.
 
-```python
+{% highlight python linenos %}
 # Here's a plot of the numbers, make of it what you will
 pyplot.plot(
     [c["num_members"] for c in data],
@@ -190,7 +195,7 @@ pyplot.plot(
 xlabel("Number of members")
 ylabel("Number of posts")
 title("Number of Posts in Groups vs. Number of Members")
-```
+{% endhighlight %}
 
 ![png](/images/fb_course_group_analysis_23_1.png)
 
@@ -201,22 +206,23 @@ There's **lots** of text available in the `feed` data of each group. Mostly
 (well, exactly) all in posts and comments. Let's flatten all of those scattered
 strings into a single gargantuan list.
 
-```python
+{% highlight python linenos %}
 from itertools import chain
 
 all_text = list(chain(*
-    [[post["message"].lower()] if "message" in post else [] +  # Grab the body of each post
+    # Grab body of each post
+    [[post["message"].lower()] if "message" in post else [] +
      [comment["message"].lower() for comment in post["comments"]["data"]]
      if "comments" in post else []  # And then grab all of its comments
      for course in course_ids for post in course["feed"]["data"]]
 ))
-```
+{% endhighlight %}
 
-```python
+{% highlight python linenos %}
 # How many text posts and comments? (Also, I lied in the title,
 # there are definitely numbers in this section >:D)
 len(all_text)
-```
+{% endhighlight %}
 
 
 
@@ -224,11 +230,11 @@ len(all_text)
 
 
 
-```python
+{% highlight python linenos %}
 # How about WORDS?
 all_words = list(chain(*[text.split() for text in all_text]))
 len(all_words)
-```
+{% endhighlight %}
 
 
 
@@ -240,7 +246,7 @@ len(all_words)
 Let's start off with a [wordcloud](https://github.com/amueller/word_cloud),
 because those are always fun.
 
-```python
+{% highlight python linenos %}
 import wordcloud
 from IPython.core.display import Image
 
@@ -255,7 +261,7 @@ elements = wordcloud.fit_words(words, **dimensions)
 # Draw the positioned words
 wordcloud.draw(elements, 'wordcloud.png', **dimensions)
 Image(filename='wordcloud.png')
-```
+{% endhighlight %}
 
 
 ![png](/images/fb_course_group_analysis_30_0.png)
@@ -267,14 +273,14 @@ Let's look at a table of the 30 top interesting words. Note: I have filtered out
 numbers from the following table (they were very popular but ultimately
 uninteresting).
 
-```python
+{% highlight python linenos %}
 from prettytable import PrettyTable
 
 t = PrettyTable(["Word", "Frequency"])
 for w, f in filter(lambda w: w[0].isalpha(), words)[:30]:
     t.add_row([w, "{:0.3f}".format(f)])
 print(t)
-```
+{% endhighlight %}
 
     +------------+-----------+
     |    Word    | Frequency |
@@ -319,9 +325,10 @@ the discourse on these groups.
 Also, there is a surprising lack of expletives overall, one that I completely
 did not expect.
 
-```python
-[w for w in all_words if w in ["shit", "damn", "fuck", "crap", "bull", "bullshit", "bs"]]
-```
+{% highlight python linenos %}
+[w for w in all_words if w in ["shit", "damn", "fuck", "crap", "bull",
+"bullshit", "bs"]]
+{% endhighlight %}
 
 
 
