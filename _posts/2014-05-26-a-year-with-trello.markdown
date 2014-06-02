@@ -1,8 +1,10 @@
 ---
 layout: post
-title: A Year With Trello
+title: (Internal) A Year With Trello
 author: Hamza Faran
 ---
+
+*The audience of this post is ECESS*
 
 Let’s face it; we do some awesome stuff. More specifically, we plan awesome events. Big, awesome events. Like, say, our (hopefully annual continually) Silicon Valley trip.
 
