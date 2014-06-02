@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Somewhat Objective Look at Facebook Course Groups
+author: Hamza Faran
 ---
 
 ## Why?
