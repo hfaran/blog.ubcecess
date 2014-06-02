@@ -14,7 +14,7 @@ We tried Trello for this purpose last year. Was it satisfactory? Sure. Could we 
 
 Case study time! Let's look at the Silicon Valley board from last year on Trello.
 
-![Silicon Valley Trip 2013/2014 Planning Board](https://gist.githubusercontent.com/hfaran/e0a9a1d8b9978bbb1414/raw/dc7c2c596a8ec3154f26b11f0ed8bf964aca9d71/si_valley_board.png)
+![Silicon Valley Trip 2013/2014 Planning Board](/images/si_valley_board.png)
 
 Trello offers us a nice and simple Kanban board. The board UI is admittedly very easy-to-use and really easy to get started with. We even get a way to represent subtasks in cards via checklists.
 
