@@ -52,24 +52,25 @@ courses = [
 courses
 {% endhighlight %}
 
-{% highlight python linenos %}
-['EECE 300 - Term 2 2013W',
- 'EECE 310 - Term 2 2013W',
- 'EECE 315 - Term 2 2013W',
- 'EECE 320 - Term 2 2013W',
- 'EECE 331 - Term 2 2013W',
- 'EECE 352 - Term 2 2013W',
- 'EECE 353 - Term 2 2013W',
- 'EECE 356 - Term 2 2013W',
- 'EECE 359 - Term 2 2013W',
- 'EECE 360 - Term 2 2013W',
- 'EECE 364 - Term 2 2013W',
- 'EECE 373 - Term 2 2013W',
- 'EECE 380 - Term 2 2013W',
- 'EECE 381 - Term 2 2013W',
- 'EECE 392 - Term 2 2013W',
- 'CPSC 304 - Term 2 2013W']
-{% endhighlight %}
+
+
+    ['EECE 300 - Term 2 2013W',
+     'EECE 310 - Term 2 2013W',
+     'EECE 315 - Term 2 2013W',
+     'EECE 320 - Term 2 2013W',
+     'EECE 331 - Term 2 2013W',
+     'EECE 352 - Term 2 2013W',
+     'EECE 353 - Term 2 2013W',
+     'EECE 356 - Term 2 2013W',
+     'EECE 359 - Term 2 2013W',
+     'EECE 360 - Term 2 2013W',
+     'EECE 364 - Term 2 2013W',
+     'EECE 373 - Term 2 2013W',
+     'EECE 380 - Term 2 2013W',
+     'EECE 381 - Term 2 2013W',
+     'EECE 392 - Term 2 2013W',
+     'CPSC 304 - Term 2 2013W']
+
 
 
 
@@ -129,24 +130,24 @@ course_stats = [{
 course_stats
 {% endhighlight %}
 
-{% highlight python linenos %}
-[{'name': u'EECE 300 - Term 2 2013W', 'num_members': 13, 'num_posts': 11},
- {'name': u'EECE 310 - Term 2 2013W', 'num_members': 26, 'num_posts': 1},
- {'name': u'EECE 315 - Term 2 2013W', 'num_members': 57, 'num_posts': 17},
- {'name': u'EECE 320 - Term 2 2013W', 'num_members': 80, 'num_posts': 18},
- {'name': u'EECE 331 - Term 2 2013W', 'num_members': 11, 'num_posts': 7},
- {'name': u'EECE 352 - Term 2 2013W', 'num_members': 66, 'num_posts': 54},
- {'name': u'EECE 353 - Term 2 2013W', 'num_members': 113, 'num_posts': 36},
- {'name': u'EECE 356 - Term 2 2013W', 'num_members': 91, 'num_posts': 98},
- {'name': u'EECE 359 - Term 2 2013W', 'num_members': 60, 'num_posts': 43},
- {'name': u'EECE 360 - Term 2 2013W', 'num_members': 74, 'num_posts': 25},
- {'name': u'EECE 364 - Term 2 2013W', 'num_members': 85, 'num_posts': 47},
- {'name': u'EECE 373 - Term 2 2013W', 'num_members': 81, 'num_posts': 82},
- {'name': u'EECE 380 - Term 2 2013W', 'num_members': 107, 'num_posts': 44},
- {'name': u'EECE 381 - Term 2 2013W', 'num_members': 49, 'num_posts': 6},
- {'name': u'EECE 392 - Term 2 2013W', 'num_members': 28, 'num_posts': 4},
- {'name': u'CPSC 304 - Term 2 2013W', 'num_members': 21, 'num_posts': 2}]
-{% endhighlight %}
+
+    [{'name': u'EECE 300 - Term 2 2013W', 'num_members': 13, 'num_posts': 11},
+     {'name': u'EECE 310 - Term 2 2013W', 'num_members': 26, 'num_posts': 1},
+     {'name': u'EECE 315 - Term 2 2013W', 'num_members': 57, 'num_posts': 17},
+     {'name': u'EECE 320 - Term 2 2013W', 'num_members': 80, 'num_posts': 18},
+     {'name': u'EECE 331 - Term 2 2013W', 'num_members': 11, 'num_posts': 7},
+     {'name': u'EECE 352 - Term 2 2013W', 'num_members': 66, 'num_posts': 54},
+     {'name': u'EECE 353 - Term 2 2013W', 'num_members': 113, 'num_posts': 36},
+     {'name': u'EECE 356 - Term 2 2013W', 'num_members': 91, 'num_posts': 98},
+     {'name': u'EECE 359 - Term 2 2013W', 'num_members': 60, 'num_posts': 43},
+     {'name': u'EECE 360 - Term 2 2013W', 'num_members': 74, 'num_posts': 25},
+     {'name': u'EECE 364 - Term 2 2013W', 'num_members': 85, 'num_posts': 47},
+     {'name': u'EECE 373 - Term 2 2013W', 'num_members': 81, 'num_posts': 82},
+     {'name': u'EECE 380 - Term 2 2013W', 'num_members': 107, 'num_posts': 44},
+     {'name': u'EECE 381 - Term 2 2013W', 'num_members': 49, 'num_posts': 6},
+     {'name': u'EECE 392 - Term 2 2013W', 'num_members': 28, 'num_posts': 4},
+     {'name': u'CPSC 304 - Term 2 2013W', 'num_members': 21, 'num_posts': 2}]
+
 
 Now that we have the numbers, let's play with them a bit/see how they look on
 some graphs.
