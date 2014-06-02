@@ -4,6 +4,8 @@ title: A Year With Trello
 author: Hamza Faran
 ---
 
+*The audience of this post is ECESS*
+
 Let’s face it; we do some awesome stuff. More specifically, we plan awesome events. Big, awesome events. Like, say, our (hopefully annual continually) Silicon Valley trip.
 
 Projects like these take lots of planning. Organization. Coordination. Synergy (joking, kind of). But seriously, these things need good project management strategies, and the tools to enact.
