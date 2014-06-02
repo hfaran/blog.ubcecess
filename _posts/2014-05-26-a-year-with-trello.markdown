@@ -1,6 +1,6 @@
 ---
 layout: post
-title: (Internal) A Year With Trello
+title: A Year With Trello
 author: Hamza Faran
 ---
 

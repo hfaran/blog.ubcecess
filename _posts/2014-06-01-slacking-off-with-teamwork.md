@@ -1,6 +1,6 @@
 ---
 layout: post
-title: (Internal) Slacking Off with Teamwork
+title: Slacking Off with Teamwork
 author: Hamza Faran
 ---
 
@@ -18,7 +18,7 @@ because while we probably could, my anecdotes suggest that most project manageme
 That being said, let's go through them anyways; maybe we'll actually find something
 that exceeds my not-really-that-high expectations.
 
-## The Simple, The Unsuitable, and BaseCamp
+## The Simple, The Unattainable, and BaseCamp
 
 As you can imagine, most of them didn't. First contender up is...
 
@@ -73,7 +73,7 @@ Task dependencies in this are **present** and better than I could have expected:
     * Even subtasks can have assignees!
 * Obligatory mention of [markdown support for comments](http://engineroom.teamwork.com/messages-and-comments-now-support-formatting-with-markdown/)
 
-At [$28/month for 15 projects w/ Google Drive integration](https://www.teamwork.com/pricing), Teamwork, to me, is looking like a winner.
+At [$24/month for 15 projects w/ Google Drive integration](https://www.teamwork.com/pricing), Teamwork, to me, is looking like a winner.
 
 ### And [Slack](www.slack.com)?
 
@@ -81,9 +81,9 @@ So far, I have been talking exclusively about project management tools. And on t
 
 Last year, we used an awkward combination of email, Facebook chat, and Trello.
 
-Awkward because email is just an awkward communication medium in general, between of the semi-enforced, semi-embraced formalism and the usual formatting strawman.
+Awkward because email is just an awkward communication medium in general, between the semi-enforced, semi-embraced formalism and the usual formatting strawman.
 
-Facebook chat is just stickers all the time.
+Facebook chat is just **stickers all the time.**
 
 Trello comments are okay, and great in the fact that if you are having a conversation in the comments of the relevant card, the information is at least properly contextualized. But, to throw ideas around or for brainstorming, it just simply isn't instant, and therefore lackluster.
 
@@ -91,18 +91,18 @@ Trello comments are okay, and great in the fact that if you are having a convers
 
 I'm assuming after going through the tour, you are already convinced that we need Slack in our lives. If not, let me reiterate some things and go over my vision of Slack for us:
 
-* Channels. We can actually have conversations relevant to a certain topic. #siliconvalley, #arcademachine, #stickerspamfest2014; we can have it all.
-* Integration with the services we already love and use
+* Channels. We can actually have conversations relevant to a certain topic. #siliconvalley, #arcademachine, **#stickerspamfest2014**; we can have it all.
+* Integration with the services we already love and use:
     * You can start a hangout in a channel just by typing `/hangout`. HOW COOL IS THAT?
-    * Google Drive docs, when pasted in, will be fully indexable (by contents and title) with Slack's search
-    * If we choose to use Trello, that is integrated too
-    *
-* Slack has mobile apps for iOS and Android that replicate the web UI and all it's functionality really well
-* We get it for free (with limitations of: maximum 5 integrations, 10,000 searchable messages, 5GB storage, which are reasonable)
+    * Google Drive docs, when pasted in, will be fully indexable (by contents and title) with Slack's search.
+    * If we choose to use Trello, that is integrated too.
+* Slack's mobile apps for iOS and Android look and reportedly function great.
+* While I think keeping at least the Facebook group would be a good idea, Slack most definitely obviates the needs for the Facebook chat, and possibly the Facebook group.
+* We get it for free (with limitations of: maximum 5 integrations, 10,000 searchable messages, 5GB storage, which are reasonable).
 
 
 ## Moving Forward
 
 I have seen the future. It exists at [ubcecess.slack.com](https://ubcecess.slack.com) and [ubcecess.teamwork.com](https://ubcecess.teamwork.com).
 
-Let me know if you guys are onboard.
+Let me know if you guys are onboard. (Of course, you won't be able to log in yet, because I'll need to send out invites, but before that happens, I need a consensus/presidential approval, which was the whole point of my wanting to know about your boarding status.)
