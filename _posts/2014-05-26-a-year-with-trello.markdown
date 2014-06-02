@@ -20,7 +20,7 @@ Trello offers us a nice and simple Kanban board. The board UI is admittedly very
 
 And unfortunately, those are all of the good things I have to say about Trello. As for what follows...
 
-### *What am I supposed to be doing? What are you supposed to be doing?*
+### What am I supposed to be doing? What are you supposed to be doing?
 
 I'm not going to espouse any particular named project/team management methodology, but I'm going to lay out what I consider are the components of a successful one.
 
@@ -33,7 +33,7 @@ Trello lets us break the large problem of Silicon Valley down into smaller probl
 * Either way, members of that card do not necessarily know what portion of the task they are assigned to
 * Even if this data is encoded in the checklist, there is no way to know this without actually opening up the card
 
-**TL;DR: There are no clear per-member assignments because members are all attached to one ticket (and checklists don't help here). We need real subtasks.**
+*TL;DR: There are no clear per-member assignments because members are all attached to one ticket (and checklists don't help here). We need real subtasks.*
 
 ## Death by a Thousand (okay, four, at least) Cuts
 
@@ -52,9 +52,9 @@ Actually, no. It wasn't. That is how I actually feel whenever I have to figure o
 
 I understand that Fog Creek want to keep Trello as simple as possible (and as close to a real Kanban board as possible). But honestly, it **could** be a little smarter.
 
-**TL;DR: Arggghhhh**
+*TL;DR: Arggghhhh*
 
-### *What* **am** *I supposed to be working on?*
+### What **am** I supposed to be working on?
 
 At any point in time, my Trello home page is filled with tens of boards. That's a lot of boards. I really do dislike checking each and every board to gain indications of what I should be spending my time on at the given moment.
 
@@ -62,15 +62,15 @@ But that is exactly what I have to do.
 
 The `Cards` view (which allows you to sort cards you are a member of by due date as well as by board) is nice, but, its severely hampered by what I talk about in '(Lack Of) Closure'. If you don't keep great track of your due dates and card memberships, have fun attempting to seriously make use of `Cards`.
 
-**TL;DR: =\(**
+*TL;DR: =\(*
 
-### *And the context of this card is*?
+### And the context of this card is?
 
 Linking cards. Dependencies between cards. I realize Fog Creek are probably working towards this, but Trello doesn't have these features **right now**, and it hurts Trello, **right now**.
 
-**TL;DR: =\|**
+*TL;DR: =\|*
 
-## *I'm Calm, I'm Calm*
+## I'm Calm, I'm Calm
 
 Maybe I am being too hard on Trello. Maybe I'm expecting Trello to be too much. Perhaps I'm using incorrectly, or I'm using it for the wrong kind of projects.
 
