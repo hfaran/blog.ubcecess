@@ -1,3 +1,5 @@
+# License for [brume](https://github.com/aigarsdz/brume)
+
 The MIT License (MIT)
 
 Copyright (c) 2013 Aigars
