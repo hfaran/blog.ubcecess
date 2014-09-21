@@ -103,6 +103,6 @@ I'm assuming after going through the tour, you are already convinced that we nee
 
 ## Moving Forward
 
-I have seen the future. It exists at [ubcecess.slack.com](https://ubcecess.slack.com) and [ubcecess.teamwork.com](https://ubcecess.teamwork.com).
+I have seen the future. It exists at [ubcecess.slack.com](https://ubcecess.slack.com) and [ecess.teamwork.com](https://ecess.teamwork.com).
 
 Let me know if you guys are onboard. (Of course, you won't be able to log in yet, because I'll need to send out invites, but before that happens, I need a consensus/presidential approval, which was the whole point of my wanting to know about your boarding status.)
